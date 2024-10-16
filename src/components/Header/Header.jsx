@@ -6,11 +6,7 @@ export default function Header() {
     <div className="header-container">
       <div className="logo-container">
         <div className="logo-icon">
-          <img src="src\assets\dice-logo.svg" alt="Twenty sided dice" />
-        </div>
-        <div className="logo-text">
-          <h4>VIK&apos;S</h4>
-          <h1>INITIATIVE TRACKER</h1>
+          <img src="src\assets\logo.svg" alt="Twenty sided dice" />
         </div>
       </div>
 

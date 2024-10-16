@@ -1,10 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import Header from "./Header/Header.jsx";
-import Background from "./Background/Background.jsx";
-import "./main.scss";
-import Wrapper from "./Wrapper/Wrapper.jsx";
-import Footer from "./Footer/Footer.jsx";
+import Header from "./components/Header/Header.jsx";
+import Background from "./components/Background/Background.jsx";
+import "./styles/main.scss";
+import Wrapper from "./components/Wrapper/Wrapper.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

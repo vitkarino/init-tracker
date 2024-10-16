@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
 
+$small: 500px;
+$medium: 900px;
+
 html {
     font-family: Alatsi, sans-serif;
 }
@@ -10,36 +13,10 @@ html {
     width: 100%;
     z-index: 3;
 
+    
     .logo-container {
-        
-        display: flex;
         user-select: none;
         pointer-events: none;
-    
-        .logo-text {
-    
-            color: white;
-    
-            h1, h4 {
-                font-weight: normal;
-                line-height: 80%;
-            }
-        
-            h4 {
-                margin-left: 10px;
-            }
-        }    
-    
-        .logo-icon {
-            img {
-                width: 42px;
-            }
-    
-            display: flex;
-            justify-content: center;
-            align-items: flex-center;
-        }
-        
     }
 
     .buttons-container {
@@ -47,15 +24,20 @@ html {
         align-items: center;
         margin-left: auto;
 
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
         button {
             background: none;
             outline: none;
             border: none;
             color: white;
+            -webkit-tap-highlight-color: transparent;
 
             font-size: 24px;
-            width: 36px;
-            height: 36px;
+            min-width: 36px;
+            min-height: 36px;
             border-radius: 50px;
 
             display: flex;
