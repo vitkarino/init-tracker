@@ -11,7 +11,9 @@ const backgrounds = [
 ];
 
 export default function Background() {
-  const [currentBackground, setCurrentBackground] = useState(0);
+  const [currentBackground, setCurrentBackground] = useState(() =>
+    Math.floor(Math.random() * backgrounds.length)
+  );
   const [fadingState, setFadingState] = useState("fading-in");
 
   useEffect(() => {
@@ -22,8 +24,8 @@ export default function Background() {
         setCurrentBackground(
           (prevIndex) => (prevIndex + 1) % backgrounds.length
         );
-        setFadingState("fading-in"); 
-      }, 2000); 
+        setFadingState("fading-in");
+      }, 2000);
 
       return () => clearTimeout(changeBackgroundTimeout);
     }, 60000);

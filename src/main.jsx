@@ -5,12 +5,14 @@ import Background from "./components/Background/Background.jsx";
 import "./styles/main.scss";
 import Wrapper from "./components/Wrapper/Wrapper.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import Tracker from "./components/Tracker/Tracker.jsx"
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Wrapper>
       <Header />
       <Footer />
+      <Tracker />
     </Wrapper>
     <Background />
     

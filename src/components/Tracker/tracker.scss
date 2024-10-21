@@ -1,0 +1,26 @@
+.tracker-container {
+
+    position: absolute;
+    top: 20%;
+    
+    h5, h2 {
+        font-weight: normal;
+    }
+
+    h2 {
+        font-family: "Bokor", system-ui;
+    }
+
+    h5 {
+        color: rgba($color: #71787F, $alpha: 1.0);
+    }
+
+    .character {
+        color: white;
+        background-color: #26282A;
+        width: auto;
+        padding: 20px;
+    }
+
+}
+
