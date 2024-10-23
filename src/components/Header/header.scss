@@ -29,34 +29,7 @@ html {
             -webkit-tap-highlight-color: transparent;
         }
 
-        button {
-            background: none;
-            outline: none;
-            border: none;
-            color: white;
-            -webkit-tap-highlight-color: transparent;
-
-            font-size: 24px;
-            min-width: 36px;
-            min-height: 36px;
-            border-radius: 50px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            transition: all 0.1s;
-            cursor: pointer;
-
-            &:hover {
-                background-color: rgba($color: white, $alpha: 0.1);
-                
-            }
-
-            &:active {
-                background-color: rgba($color: white, $alpha: 0.2);
-            }
-        }
+        
     }
 
 }
