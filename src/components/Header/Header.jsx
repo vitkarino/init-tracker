@@ -17,15 +17,6 @@ export default function Header() {
         <button className="info">
           <Icon className="" icon="material-symbols:info-outline" />
         </button>
-        <a
-          href="https://github.com/vitkarino"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="github">
-            <Icon className="" icon="mdi:github" />
-          </button>
-        </a>
       </div>
     </div>
   );

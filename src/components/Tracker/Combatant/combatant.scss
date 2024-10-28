@@ -1,0 +1,131 @@
+.combatant-container {
+    display: flex;
+    width: fit-content;
+    margin-bottom: 25px;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+
+    &:nth-child(n + 2) .combatant .initiative .label {
+        display: none;
+    }
+
+    &:hover .combatant .edit-combatant {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .drag {
+        font-size: 40px;
+        margin-right: 5px;
+        background: none;
+        cursor: grab;
+    }
+
+    .combatant {
+        color: white;
+        position: relative;
+        background-color: #26282a;
+        min-width: 400px;
+        height: 100px;
+        border-radius: 8px 8px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: visible;
+        transition: 0.2s all;
+
+        @media screen and (max-width: 500px) {
+            padding: 0 1vw;
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 5px;
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            border-radius: 0 0 8px 8px;
+            background-color: #f51b2e;
+        }
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 40px;
+            position: absolute;
+            bottom: -8px;
+            opacity: 0;
+            left: 0;
+            border-radius: 0 0 8px 8px;
+            background: linear-gradient(180deg, rgba(120, 120, 120, 0) 0%, rgba(245, 27, 46, 1) 100%);
+        }
+
+        &:focus > &::before {
+            opacity: 0.5;
+        }
+
+        .name {
+            margin-left: 10px;
+            width: 50%;
+            text-align: left;
+        }
+
+        .initiative {
+            overflow: visible;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 15%;
+            height: 80px;
+            border-right: 1px solid rgba(113, 120, 127, 1);
+
+            .label {
+                position: absolute;
+                top: -35px;
+            }
+        }
+
+        .stats {
+            width: 25%;
+            font-size: 1.2em;
+            text-align: right;
+
+            .label {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 5px;
+                margin: 10px 0;
+
+                .icon {
+                    font-size: 1.4em;
+                }
+            }
+        }
+
+        .edit-combatant {
+            opacity: 0;
+            transform: translateX(-5px);
+            flex-direction: column;
+            position: absolute;
+            right: -40px;
+            transition: 0.1s ease-in-out;
+        }
+    }
+
+    .label {
+        color: rgba(113, 120, 127, 1);
+
+        #hp {
+            color: #f51b2e;
+        }
+
+        #ac {
+            color: #1ba1f5;
+        }
+    }
+}
