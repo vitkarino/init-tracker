@@ -6,8 +6,8 @@ import { CSS } from "@dnd-kit/utilities";
 
 export default function Combatant({ combatant }) {
   const {
-    attributes,
-    listeners,
+    // attributes,
+    // listeners,
     setNodeRef,
     transform,
     transition,
@@ -33,9 +33,9 @@ export default function Combatant({ combatant }) {
       ref={setNodeRef} 
       style={style}
     >
-      <button className="drag" {...attributes} {...listeners}>
+      {/* <button className="drag" {...attributes} {...listeners}>
         <Icon icon="mdi:drag" />
-      </button>
+      </button> */}
       <div className="combatant" tabIndex="0">
         <div className="initiative">
           <h2>{combatant.initiative}</h2>
@@ -56,10 +56,10 @@ export default function Combatant({ combatant }) {
         </div>
         <div className="edit-combatant">
           <button className="delete">
-            <Icon icon="material-symbols:delete-outline" />
+            <Icon className="icon" icon="material-symbols:delete-outline" />
           </button>
           <button className="color">
-            <Icon icon="ic:outline-color-lens" />
+            <Icon className="icon" icon="ic:outline-color-lens" />
           </button>
         </div>
       </div>

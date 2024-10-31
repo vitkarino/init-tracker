@@ -1,6 +1,9 @@
 import "./tracker.scss";
 import Combatant from "./Combatant/Combatant.jsx";
+import { Icon } from "@iconify/react";
 import { useState } from "react";
+import combatantData from "@/data/combatantData.json";
+
 import {
   DndContext,
   closestCenter,
@@ -16,11 +19,8 @@ import {
 import { restrictToVerticalAxis } from "@dnd-kit/modifiers";
 
 export default function Tracker() {
-  const [combatants, setCombatants] = useState([
-    { id: 1, initiative: 32, name: "Taelon", hp: 10, ac: 15 },
-    { id: 2, initiative: 54, name: "Erlow", hp: 15, ac: 14 },
-    { id: 3, initiative: 12, name: "Tolesis", hp: 8, ac: 13 },
-  ]);
+  // Initialize state with JSON data
+  const [combatants, setCombatants] = useState(combatantData);
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -42,6 +42,17 @@ export default function Tracker() {
     }
   };
 
+  const addCombatant = () => {
+    const newCombatant = {
+      id: combatants.length + 1,
+      initiative: 0,
+      name: `Add name`,
+      hp: 10,
+      ac: 10,
+    };
+    setCombatants((prevCombatants) => [...prevCombatants, newCombatant]);
+  };
+
   return (
     <div className="tracker-container">
       <DndContext
@@ -54,9 +65,14 @@ export default function Tracker() {
           items={combatants.map((c) => c.id)}
           strategy={verticalListSortingStrategy}
         >
+          <div className="combatants-grid">
             {combatants.map((c) => (
               <Combatant key={c.id} combatant={c} />
             ))}
+            <button className="add-new-btn" onClick={addCombatant}>
+              <Icon className="icon" icon="material-symbols:add" id="hp" />
+            </button>
+          </div>
         </SortableContext>
       </DndContext>
     </div>

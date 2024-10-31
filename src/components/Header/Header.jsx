@@ -12,10 +12,10 @@ export default function Header() {
 
       <div className="buttons-container">
         <button className="save">
-          <Icon className="" icon="material-symbols:save-outline" />
+          <Icon className="icon" icon="material-symbols:save-outline" />
         </button>
         <button className="info">
-          <Icon className="" icon="material-symbols:info-outline" />
+          <Icon className="icon" icon="material-symbols:info-outline" />
         </button>
       </div>
     </div>

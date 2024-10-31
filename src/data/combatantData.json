@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "initiative": 32,
+        "name": "Taelon",
+        "hp": 10,
+        "ac": 15
+    },
+    {
+        "id": 2,
+        "initiative": 20,
+        "name": "Lyria",
+        "hp": 8,
+        "ac": 12
+    },
+    {
+        "id": 3,
+        "initiative": 15,
+        "name": "Borin",
+        "hp": 12,
+        "ac": 14
+    }
+]

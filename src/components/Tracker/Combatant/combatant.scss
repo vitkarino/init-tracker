@@ -1,26 +1,21 @@
 .combatant-container {
     display: flex;
     width: fit-content;
-    margin-bottom: 25px;
     align-items: center;
     position: relative;
     overflow: visible;
 
-    &:nth-child(n + 2) .combatant .initiative .label {
-        display: none;
-    }
+    // &:hover .combatant .edit-combatant {
+    //     opacity: 1;
+    //     transform: translateX(0);
+    // }
 
-    &:hover .combatant .edit-combatant {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    .drag {
-        font-size: 40px;
-        margin-right: 5px;
-        background: none;
-        cursor: grab;
-    }
+    // .drag {
+    //     font-size: 40px;
+    //     margin-right: 5px;
+    //     background: none;
+    //     cursor: grab;
+    // } 
 
     .combatant {
         color: white;
@@ -107,14 +102,14 @@
             }
         }
 
-        .edit-combatant {
-            opacity: 0;
-            transform: translateX(-5px);
-            flex-direction: column;
-            position: absolute;
-            right: -40px;
-            transition: 0.1s ease-in-out;
-        }
+        // .edit-combatant {
+        //     opacity: 0;
+        //     transform: translateX(-5px);
+        //     flex-direction: column;
+        //     position: absolute;
+        //     right: -40px;
+        //     transition: 0.1s ease-in-out;
+        // }
     }
 
     .label {
