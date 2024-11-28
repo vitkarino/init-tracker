@@ -1,7 +1,7 @@
 import "./header.scss";
 import { Icon } from "@iconify/react";
 
-export default function Header() {
+const Header = () => {
   return (
     <div className="header-container">
       <div className="logo-container">
@@ -21,3 +21,5 @@ export default function Header() {
     </div>
   );
 }
+
+export default Header;

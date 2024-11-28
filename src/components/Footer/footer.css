@@ -1,0 +1,10 @@
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+.footer-container h5 {
+  color: #4e4e4e;
+}/*# sourceMappingURL=footer.css.map */

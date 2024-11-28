@@ -6,7 +6,8 @@ import "./styles/main.scss";
 import Wrapper from "./components/Wrapper/Wrapper.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Tracker from "./components/Tracker/Tracker.jsx"
-import ContextMenu from "./components/ContextMenu/ContextMenu.jsx"
+// import ContextMenu from "./components/ContextMenu/ContextMenu.jsx"
+// import { data } from "./data/contextOptions.json"
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -16,6 +17,6 @@ createRoot(document.getElementById("root")).render(
       <Tracker />
     </Wrapper>
     <Background />
-    <ContextMenu />
+    {/* <ContextMenu data={data}/> */}
   </StrictMode>
 );

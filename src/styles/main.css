@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Alatsi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bokor&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+html {
+  font-family: Alatsi, sans-serif;
+}
+
+::-moz-selection {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+::selection {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+h2,
+h5 {
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 2.3em;
+}
+
+a {
+  text-decoration: none;
+  color: #4e4e4e;
+  transition: 0.2s all;
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover {
+  color: #6b6b6b;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  font-family: Alatsi, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 18px;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+button .icon {
+  font-size: 24px;
+}
+button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+button:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #6b6b6b;
+  border-radius: 10px;
+}/*# sourceMappingURL=main.css.map */

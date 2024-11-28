@@ -1,41 +1,35 @@
-import "./combatant.scss";
+import "./combatant.scss"
+import { useState } from "react";
 import { Icon } from "@iconify/react";
 import PropTypes from "prop-types";
-import { useSortable } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
+import ContextMenu from "../../ContextMenu/ContextMenu.jsx"; 
 
 export default function Combatant({ combatant }) {
-  const {
-    // attributes,
-    // listeners,
-    setNodeRef,
-    transform,
-    transition,
-    isDragging
-  } = useSortable({
-    id: combatant.id,
-    transition: {
-      duration: 200,
-      easing: 'cubic-bezier(0.25, 1, 0.5, 1)' 
-    }
-  });
+  const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
+  const [menuVisible, setMenuVisible] = useState(false);
 
-  const style = {
-    transform: CSS.Transform.toString(transform),
-    transition,
-    zIndex: isDragging ? 1000 : 0,
-    touchAction: 'none',
+  const handleContextMenu = (e) => {
+    e.preventDefault();
+    setMenuPosition({ x: e.pageX - 100, y: e.pageY - 200 }); // Slight offset
+    setMenuVisible(true);
   };
+  
+
+  const handleClickOutside = () => {
+    setMenuVisible(false);
+  };
+
+  const contextOptions = [
+    { id: 1, label: "Edit", icon: "material-symbols:edit-outline" },
+    { id: 2, label: "Delete", icon: "material-symbols:delete-outline" },
+    { id: 3, label: "Color", icon: "ic:outline-color-lens" },
+  ];
 
   return (
     <div 
-      className={`combatant-container ${isDragging ? 'dragging' : ''}`} 
-      ref={setNodeRef} 
-      style={style}
-    >
-      {/* <button className="drag" {...attributes} {...listeners}>
-        <Icon icon="mdi:drag" />
-      </button> */}
+    onContextMenu={handleContextMenu} 
+    onClick={handleClickOutside}
+    className="combatant-container">
       <div className="combatant" tabIndex="0">
         <div className="initiative">
           <h2>{combatant.initiative}</h2>
@@ -63,9 +57,17 @@ export default function Combatant({ combatant }) {
           </button>
         </div>
       </div>
+
+      {menuVisible && (
+        <ContextMenu
+          data={contextOptions}
+          menuPosition={menuPosition}
+          onClickOutside={handleClickOutside}
+        />
+      )}
     </div>
   );
-}
+};
 
 Combatant.propTypes = {
   combatant: PropTypes.shape({

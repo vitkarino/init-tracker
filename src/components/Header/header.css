@@ -1,0 +1,17 @@
+.header-container {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  z-index: 3;
+}
+.header-container .logo-container {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+.header-container .buttons-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}/*# sourceMappingURL=header.css.map */

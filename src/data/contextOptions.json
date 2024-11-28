@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "label": "Edit",
+      "icon": "material-symbols:edit-outline"
+    },
+    {
+      "id": 2,
+      "label": "Change color",
+      "icon": "ic:outline-color-lens"
+    },
+    {
+      "id": 3,
+      "label": "Delete",
+      "icon": "material-symbols:delete-outline"
+    }
+  ]
+  

@@ -1,0 +1,94 @@
+.combatant-container {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+}
+.combatant-container .combatant {
+  color: white;
+  position: relative;
+  background-color: #26282a;
+  min-width: 400px;
+  height: 100px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: visible;
+  transition: 0.2s all;
+}
+@media screen and (max-width: 500px) {
+  .combatant-container .combatant {
+    padding: 0 1vw;
+  }
+}
+.combatant-container .combatant::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  border-radius: 0 0 8px 8px;
+  background-color: #f51b2e;
+}
+.combatant-container .combatant::before {
+  content: "";
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: -8px;
+  opacity: 0;
+  left: 0;
+  border-radius: 0 0 8px 8px;
+  background: linear-gradient(180deg, rgba(120, 120, 120, 0) 0%, rgb(245, 27, 46) 100%);
+}
+.combatant-container .combatant:focus > .combatant-container .combatant::before {
+  opacity: 0.5;
+}
+.combatant-container .combatant .name {
+  margin-left: 10px;
+  width: 50%;
+  text-align: left;
+}
+.combatant-container .combatant .initiative {
+  overflow: visible;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 15%;
+  height: 80px;
+  border-right: 1px solid rgb(113, 120, 127);
+}
+.combatant-container .combatant .initiative .label {
+  position: absolute;
+  top: -35px;
+}
+.combatant-container .combatant .stats {
+  width: 25%;
+  font-size: 1.2em;
+  text-align: right;
+}
+.combatant-container .combatant .stats .label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  margin: 10px 0;
+}
+.combatant-container .combatant .stats .label .icon {
+  font-size: 1.4em;
+}
+.combatant-container .label {
+  color: rgb(113, 120, 127);
+}
+.combatant-container .label #hp {
+  color: #f51b2e;
+}
+.combatant-container .label #ac {
+  color: #1ba1f5;
+}/*# sourceMappingURL=combatant.css.map */

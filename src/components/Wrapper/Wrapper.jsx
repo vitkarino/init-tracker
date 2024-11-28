@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import "./wrapper.scss";
 
-export default function Wrapper({ children }) {
+const Wrapper = ({ children }) => {
     return (
         <div className="wrapper-container">
             {children}
@@ -12,3 +12,5 @@ export default function Wrapper({ children }) {
 Wrapper.propTypes = {
     children: PropTypes.node
 };
+
+export default Wrapper;
